@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+}
+
+.gridItem {
+    background-color: red;
+    height: 50px;
+    width: auto;
+}
+
+.buttonContainer{
+    margin-top: 32px;
+}
+
+.resetButton {
+    font-size: 32px;
+}
