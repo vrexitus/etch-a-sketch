@@ -1,3 +1,4 @@
+
 .container {
     display: flex;
     flex-direction: column;
@@ -5,16 +6,27 @@
     gap: 32px;
 }
 
+body {
+    background-color: #1a1818;
+    font-family: sans-serif;
+}
+
 .gridContainer {
     display: flex;
     flex-wrap: wrap;
+    height: 960px;
+    width: 960px;
+    max-height: 960px;
     max-width: 960px;
+    border: 10px solid white;
+    border-radius: 15px;
 }
 
 .gridItem {
-    background-color: red;
-    height: 50px;
-    width: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: coral;
+    opacity: 0;
 }
 
 .buttonContainer{
@@ -22,5 +34,16 @@
 }
 
 .resetButton {
+    border: 5px solid white;
+    border-radius: 15px;
+    color: white;
+    background-color: #1a1818;
+    padding: 5%;
+    font-weight: 700;
     font-size: 32px;
+}
+
+.resetButton:hover {
+    color: coral;
+    border-color: coral;
 }

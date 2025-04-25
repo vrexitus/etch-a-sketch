@@ -17,11 +17,22 @@ function generateGrid(numOfSquares) {
     for (let i = 1; i <= numOfSquares*numOfSquares; i++) {
         let gridItem = document.createElement("div");
         let color = random_rgba();
-        gridItem.textContent = i;
         gridItem.classList.add("gridItem");
         gridItem.style.flexBasis = "calc(100%/" + String(numOfSquares).toString() + ")";
         gridItem.addEventListener("mouseover", () => {
-            gridItem.style.backgroundColor = color;
+            var i = 0;
+            if (gridItem.style.opacity != 0) {
+                return ;
+            }
+            gridItem.style.opacity = 0;
+            var k = window.setInterval(function() {
+              if (i >= 10) {
+                clearInterval(k);
+              } else {
+                gridItem.style.opacity = i / 10;
+                i++;
+              }
+            }, 25);
         });
         gridContainer.appendChild(gridItem);
     }
