@@ -49,7 +49,7 @@ function resetGrid(){
     gridValue.remove();
     let newSquares = 0;
     do {
-        newSquares = parseInt(prompt("How many squares?:  (Enter a number between 0 and 100)"));
+        newSquares = parseInt(prompt("How many squares per side?:  (Enter a number between 0 and 100)"));
     } while (newSquares > 100)
     gridValue = generateGrid(newSquares);
 }
